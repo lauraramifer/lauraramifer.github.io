@@ -1,0 +1,72 @@
+{
+  "name": "Laura Ramirez F.",
+  "title": "Laura Ramirez F. Portfolio",
+  "email": "Lauraramifer@gmail.com",
+  "location": "London, UK",
+  "contactUrl": "https://www.linkedin.com/in/lauraramirezf/",
+  "heroVideo": "https://framerusercontent.com/assets/KDlei2rmALrJ6yXHKWbvTPaNc4.mp4",
+  "heroPoster": "https://framerusercontent.com/images/o5uXNQynLco1HC0d1ntfDRliP0.jpg?width=1590&height=1200",
+  "lede": "A creative producer and postproduction lead helping brands connect through motion, story, and intention, integrating AI to expand creative possibilities.",
+  "about": [
+    "I’m Laura Ramírez, a creative producer and post-production lead with 10+ years of experience shaping thoughtful, purpose-driven visual experiences across branding, music, international cooperation and social impact.",
+    "Having lived and worked across Brazil, the U.S., Canada and Norway, I bring a global perspective shaped by cultural nuance and human connection. I thoughtfully integrate AI tools to enhance efficiency and exploration while keeping creative intention at the centre.",
+    "My aim is to turn ideas into clear, purposeful motion-driven experiences."
+  ],
+  "cta": "Exploring new opportunities where creativity, motion and strategy align. Let’s connect.",
+  "clients": [
+    "Mercedes-Benz",
+    "BMW",
+    "Apple ACR",
+    "Alcaldía de Bogotá",
+    "Jack Daniel’s",
+    "Allianz",
+    "Bland"
+  ],
+  "services": [
+    "Creative Direction",
+    "Communication & Narrative Strategy",
+    "Audiovisual Production",
+    "Audiovisual Campaigns",
+    "Postproduction Leadership",
+    "Motion Graphics",
+    "Short-form & Digital Content",
+    "Event Coverage (Video & Photo)"
+  ],
+  "socials": [
+    { "label": "Behance", "url": "https://www.behance.net/lauraramrez19" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/lauraramirezf/" },
+    { "label": "Vimeo", "url": "https://vimeo.com/lauraramifer" }
+  ],
+  "categories": [
+    {
+      "id": "reel",
+      "label": "Reel",
+      "blurb": "A selection of recent projects highlighting my work in production and postproduction."
+    },
+    {
+      "id": "commercial",
+      "label": "Commercial",
+      "blurb": "Commercial projects developed for brands across different industries."
+    },
+    {
+      "id": "music-videos",
+      "label": "Music Videos",
+      "blurb": "Music videos focused on storytelling, rhythm and visual identity."
+    },
+    {
+      "id": "animation",
+      "label": "Animation",
+      "blurb": "Motion graphics and animated content created for digital and campaign use."
+    },
+    {
+      "id": "photography",
+      "label": "Photography",
+      "blurb": "Commercial, event and artistic photography across a range of contexts and formats."
+    },
+    {
+      "id": "events",
+      "label": "Events",
+      "blurb": "Video and photo coverage of live events, conferences and public activations."
+    }
+  ]
+}

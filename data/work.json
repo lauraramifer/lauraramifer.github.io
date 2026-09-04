@@ -1,0 +1,379 @@
+[
+  {
+    "id": "showreel-2024",
+    "title": "Editing showreel",
+    "year": 2024,
+    "categories": ["reel"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/editing-showreel-laura-ramirez",
+    "still": "https://framerusercontent.com/images/698l8fHjtWDEWGSwYoCFmBuqw.gif?width=1400",
+    "plate": "#1a1410",
+    "featured": true,
+    "span": "wide"
+  },
+  {
+    "id": "abc-motors-dealerworld",
+    "title": "ABC Motors DealerWorld",
+    "year": 2026,
+    "categories": ["commercial", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/abc-motors-dealerworld-promo-ad",
+    "plate": "#3b0d12"
+  },
+  {
+    "id": "ttec-bethespark",
+    "title": "TTEC BeTheSpark",
+    "year": 2025,
+    "categories": ["commercial"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/ttec-bethespark",
+    "plate": "#102033"
+  },
+  {
+    "id": "bland-native-triggers",
+    "title": "Bland",
+    "year": 2026,
+    "categories": ["commercial", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/bland-native-triggers",
+    "still": "https://framerusercontent.com/images/vYQ3dbDilXogFLARPczFNnXo.gif?width=900",
+    "plate": "#6b1418",
+    "featured": true,
+    "span": "tall"
+  },
+  {
+    "id": "boxisleep-kv",
+    "title": "BoxiSleep KV",
+    "year": 2022,
+    "categories": ["animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/kv-animation-for-boxisleep",
+    "plate": "#0d3b38"
+  },
+  {
+    "id": "gynger-motionad",
+    "title": "Gynger",
+    "year": 2026,
+    "categories": ["commercial", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/gynger-motionad",
+    "plate": "#2a1840"
+  },
+  {
+    "id": "berlitz-ctv",
+    "title": "Berlitz CTV",
+    "year": 2026,
+    "categories": ["commercial"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/berlitz-ctv-ad",
+    "plate": "#12304a"
+  },
+  {
+    "id": "social-micro-content",
+    "title": "Social micro-content",
+    "year": 2024,
+    "categories": ["commercial", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/social-media-micro-content",
+    "plate": "#3a2208"
+  },
+  {
+    "id": "elm-future-of-learning",
+    "title": "ELM Future of Learning",
+    "year": 2026,
+    "categories": ["commercial", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/elm-future-of-learning-promo",
+    "plate": "#0f2f24"
+  },
+  {
+    "id": "photography-2026",
+    "title": "Photography",
+    "year": 2026,
+    "categories": ["photography"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/photography",
+    "still": "https://framerusercontent.com/images/DCW8J6InyoU47knTMg1bttUsMsY.jpg?width=1346",
+    "plate": "#2a2724",
+    "span": "wide"
+  },
+  {
+    "id": "gathered-beans",
+    "title": "Gathered Beans",
+    "year": 2026,
+    "categories": ["commercial"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/gathered-beans-promo",
+    "plate": "#3d2a14"
+  },
+  {
+    "id": "logo-animations-reel",
+    "title": "Logo animations",
+    "year": 2026,
+    "categories": ["animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/social-media-video-capsules",
+    "plate": "#141828"
+  },
+  {
+    "id": "bmt-masterclass",
+    "title": "BMT MasterClass",
+    "year": 2022,
+    "categories": ["commercial", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/bmt-masterclass-promo",
+    "plate": "#1c3040"
+  },
+  {
+    "id": "alcaldia-report-videos",
+    "title": "Alcaldía Mayor de Bogotá",
+    "year": 2022,
+    "categories": ["commercial"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/report-videos-alcaldia-mayor-de-bogota",
+    "plate": "#1a2330"
+  },
+  {
+    "id": "jay-caridad-se-pego",
+    "title": "Jay Caridad — Se Pegó",
+    "year": 2023,
+    "categories": ["music-videos"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/jay-caridad-se-pego-videoclip-oficial",
+    "plate": "#4a1020"
+  },
+  {
+    "id": "tisscrubs-promo",
+    "title": "Tisscrubs",
+    "year": 2026,
+    "categories": ["commercial"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/tisscrubs-video-promo",
+    "plate": "#203018"
+  },
+  {
+    "id": "special-olympics-colombia",
+    "title": "Special Olympics Colombia",
+    "year": 2023,
+    "categories": ["events"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/special-olympics-colombia",
+    "plate": "#16301c"
+  },
+  {
+    "id": "corporate-event-recaps",
+    "title": "Corporate event recaps",
+    "year": 2025,
+    "categories": ["events"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/corporate-event-recaps",
+    "plate": "#241c14"
+  },
+  {
+    "id": "rock-infame",
+    "title": "Rock Infame",
+    "year": 2022,
+    "categories": ["music-videos"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/official-music-video-rock-infame",
+    "plate": "#2b0f18"
+  },
+  {
+    "id": "future-sounds-iii",
+    "title": "Open Mic Future Sounds III",
+    "year": 2023,
+    "categories": ["music-videos", "events"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/open-mic-future-sounds-iii",
+    "plate": "#1a1028"
+  },
+  {
+    "id": "hacienda-el-noviciado",
+    "title": "Hacienda El Noviciado",
+    "year": 2022,
+    "categories": ["commercial"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/operational-safety-video-hacienda-el-noviciado",
+    "plate": "#243018"
+  },
+  {
+    "id": "gaitan-al-aire",
+    "title": "Gaitán al Aire",
+    "year": 2022,
+    "categories": ["commercial"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/gaitan-al-aire-alcaldia-mayor-de-bogota-2021",
+    "plate": "#122030"
+  },
+  {
+    "id": "zakuska-vodka",
+    "title": "Zakuska Vodka",
+    "year": 2026,
+    "categories": ["commercial", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/copy-of-zakuska-vodka-ai-ad",
+    "plate": "#3a2010"
+  },
+  {
+    "id": "epay-policy",
+    "title": "Epay Policy",
+    "year": 2026,
+    "categories": ["commercial", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/epaypolicy-animatedads",
+    "plate": "#0e2a32"
+  },
+  {
+    "id": "frente-a-mi",
+    "title": "Frente a mí — P.P. Music",
+    "year": 2023,
+    "categories": ["music-videos"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/frente-a-mi-pp-music-official-music-video",
+    "plate": "#301018"
+  },
+  {
+    "id": "no-eres-tu-soy-yo",
+    "title": "Jay Caridad — No eres tú soy yo",
+    "year": 2023,
+    "categories": ["music-videos"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/no-eres-tu-soy-yo-jay-caridad-visualizer",
+    "plate": "#401428"
+  },
+  {
+    "id": "boxi-topper",
+    "title": "Boxi Topper relaunch",
+    "year": 2022,
+    "categories": ["commercial"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/promotional-videos-boxi-topper-relaunch",
+    "plate": "#2a1810"
+  },
+  {
+    "id": "yo-te-creo",
+    "title": "La Crew — Yo te creo",
+    "year": 2022,
+    "categories": ["music-videos"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/yo-te-creo-la-crew-official-music-video",
+    "plate": "#1c1020"
+  },
+  {
+    "id": "future-sounds-ii",
+    "title": "Open Mic Future Sounds II",
+    "year": 2022,
+    "categories": ["music-videos", "events"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/open-mic-future-sounds-ii",
+    "plate": "#181028"
+  },
+  {
+    "id": "apretaito",
+    "title": "Big Macilla — Apretaito",
+    "year": 2023,
+    "categories": ["music-videos"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/apretaito-big-macilla-visualizer-oficial",
+    "plate": "#3a0c14"
+  },
+  {
+    "id": "te-equivocaste",
+    "title": "Pedro Lizarazo — Te equivocaste",
+    "year": 2022,
+    "categories": ["music-videos"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/te-equivocaste-live-session-pedro-lizarazo",
+    "plate": "#241810"
+  },
+  {
+    "id": "cada-loco",
+    "title": "Cada loco con su tema",
+    "year": 2022,
+    "categories": ["commercial"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/cada-loco-son-su-tema-video-institucional",
+    "plate": "#1a2830"
+  },
+  {
+    "id": "2-arroyos",
+    "title": "2 Arroyos",
+    "year": 2023,
+    "categories": ["commercial"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/video-promo-2-arroyos",
+    "plate": "#203018"
+  },
+  {
+    "id": "addictions-jay-caridad",
+    "title": "Jay Caridad — Addictions",
+    "year": 2023,
+    "categories": ["music-videos", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/addictions-jay-caridad-lyricvideo",
+    "plate": "#280818"
+  },
+  {
+    "id": "que-vas-a-hacer",
+    "title": "Jay Caridad — Qué vas a hacer?",
+    "year": 2022,
+    "categories": ["music-videos", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/jay-caridad-que-vas-a-hacer-official-lyric-video",
+    "plate": "#180c28"
+  },
+  {
+    "id": "ven-a-mi-casa",
+    "title": "Jay Caridad — Ven a mi casa esta Navidad",
+    "year": 2022,
+    "categories": ["music-videos"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/ven-a-mi-casa-esta-navidad-jay-caridad",
+    "plate": "#3a1410"
+  },
+  {
+    "id": "corrupt-punks",
+    "title": "Corrupt Punks",
+    "year": 2022,
+    "categories": ["music-videos"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/promo-corrupt-punks",
+    "plate": "#101010"
+  },
+  {
+    "id": "altos-de-la-concepcion",
+    "title": "Altos de la Concepción",
+    "year": 2023,
+    "categories": ["commercial"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/promo-altos-de-la-concepcion",
+    "plate": "#2a2418"
+  },
+  {
+    "id": "mueren-las-palabras",
+    "title": "Daniel Opic — Mueren las palabras",
+    "year": 2022,
+    "categories": ["music-videos", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/mueren-las-palabras-lyric-video-daniel-opic",
+    "plate": "#1c1428"
+  },
+  {
+    "id": "no-quiere-llover",
+    "title": "Daniel Opic — No quiere llover",
+    "year": 2022,
+    "categories": ["music-videos"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/teaser-no-quiere-llover-daniel-opic",
+    "plate": "#102028"
+  },
+  {
+    "id": "bebe-poliglota",
+    "title": "Método Bebé Políglota",
+    "year": 2022,
+    "categories": ["commercial", "animation"],
+    "vimeo": "",
+    "watchUrl": "https://lauraramifer.myportfolio.com/promos-testimonios-metodo-bebe-poliglota",
+    "plate": "#143040"
+  }
+]
