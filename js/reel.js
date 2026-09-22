@@ -27,11 +27,13 @@ const loadJson = (path) =>
     return response.json();
   });
 
-const decodeStill = (src) => {
-  const image = new Image();
-  image.src = src;
-  return image.decode();
-};
+const loadStill = (src) =>
+  new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve();
+    image.onerror = () => reject(new Error(`Could not load ${src}`));
+    image.src = src;
+  });
 
 const wait = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
 
@@ -70,6 +72,7 @@ const start = async () => {
   let index = 0;
   let locked = false;
   let pointer = null;
+  let touched = false;
 
   const setLine = (ratio) => {
     line.style.left = `${Math.min(1, Math.max(0, ratio)) * 100}%`;
@@ -150,6 +153,7 @@ const start = async () => {
   });
 
   const onPointerDown = (event) => {
+    touched = true;
     if (event.currentTarget === playhead && event.target.closest("button")) return;
     pointer = {
       id: event.pointerId,
@@ -197,6 +201,7 @@ const start = async () => {
   hold.addEventListener("click", () => setLocked(!locked));
 
   document.addEventListener("keydown", (event) => {
+    touched = true;
     if (event.target.closest("input, textarea")) return;
     if (event.key === "Escape") {
       if (!about.hidden) {
@@ -237,7 +242,8 @@ const start = async () => {
   });
   aboutClose.addEventListener("click", closeAbout);
 
-  await Promise.all(reel.map((item) => decodeStill(item.still)));
+  const preloading = reel.map((item) => loadStill(item.still));
+  await preloading[0];
   paint(0, { cut: false });
   setLine(0.5 / reel.length);
   if (!reduceMotion) {
@@ -246,6 +252,10 @@ const start = async () => {
   }
   document.body.classList.add("is-live");
   titlecard.setAttribute("aria-hidden", "true");
+  if (!reduceMotion) {
+    await Promise.all([preloading[1], wait(1100)]);
+    if (!touched) step(1);
+  }
 };
 
 start().catch((error) => {

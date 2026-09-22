@@ -222,7 +222,7 @@ body.is-locked .frame {
 .transport {
   flex: 0 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(180px, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 12px 22px;
   align-items: center;
   padding: 12px var(--pad) calc(12px + env(safe-area-inset-bottom));
@@ -266,6 +266,7 @@ body.is-about .transport {
 
 .playhead {
   position: relative;
+  grid-column: 1 / -1;
   height: 32px;
   cursor: ew-resize;
   touch-action: none;
