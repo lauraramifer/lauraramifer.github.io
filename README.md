@@ -1,6 +1,8 @@
 # Laura Ramirez F.
 
-Private GitHub Pages portfolio. The live site should match [the Framer reference](https://lauraramirezf.framer.website/): black slate, Bebas Neue masthead, blue Contact, cinematic stills.
+GitHub Pages portfolio. The homepage is a scrub reel: move across the picture to cut between pieces, click to hold the credit, arrows and a phone flick do the same. The full catalog stays on `work.html`.
+
+Black slate, Bebas Neue, and the blue contact link stay from the earlier site. Bio, clients, and services open from the name.
 
 Videos stay on Vimeo (or YouTube). This repo only stores pages, stills, and a catalog — GitHub cannot host 50 video files.
 
@@ -31,6 +33,7 @@ Optional fields:
 - `featured` — `true` to pin it on the home feature slot
 - `span` — `"wide"` or `"tall"`
 - `categories` — `reel`, `commercial`, `music-videos`, `animation`, `photography`, `events`
+- `reel` — a number, `1` through `8`, to place it on the homepage scrub. It also needs a `still`.
 
 Bio, clients, services, and links live in `data/site.json`.
 

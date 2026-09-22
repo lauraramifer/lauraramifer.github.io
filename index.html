@@ -3,65 +3,58 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Laura Ramirez F. Portfolio</title>
+    <title>Laura Ramirez F.</title>
     <meta
       name="description"
-      content="Laura Ramírez — creative producer and post-production lead. Motion, story, and intention."
+      content="Laura Ramírez — creative producer and post-production lead. Motion, ads, and music."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;1,400&family=Bebas+Neue&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600&family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/reel.css" />
   </head>
-  <body data-page="home">
-    <a class="skip" href="#main">Skip to work</a>
-    <header class="masthead" data-masthead></header>
-    <main id="main">
-      <section class="hero">
-        <div class="hero-frame">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            poster="https://framerusercontent.com/images/o5uXNQynLco1HC0d1ntfDRliP0.jpg?width=1590&height=1200"
-            src="https://framerusercontent.com/assets/KDlei2rmALrJ6yXHKWbvTPaNc4.mp4"
-          ></video>
-        </div>
+  <body>
+    <a class="skip" href="#stage">Skip to reel</a>
+    <header class="top">
+      <button class="name" type="button" id="about-open" aria-expanded="false" aria-controls="about">
+        Laura Ramirez F.
+      </button>
+      <nav class="links" aria-label="Site">
+        <span class="year" id="year"></span>
+        <a href="work.html">All work</a>
+        <a class="contact" id="contact" href="https://www.linkedin.com/in/lauraramirezf/">Contact</a>
+      </nav>
+    </header>
+
+    <main class="stage" id="stage">
+      <div class="titlecard" id="titlecard">
+        <p id="titlecard-name">Laura Ramirez F.</p>
+      </div>
+      <button class="frame" type="button" id="frame" aria-pressed="false" aria-label="Hold the current piece">
+        <img id="still" alt="" />
+        <span class="flash" id="flash" aria-hidden="true"></span>
+      </button>
+      <section class="about" id="about" hidden>
+        <div class="about-copy" id="about-copy"></div>
+        <button class="about-close" type="button" id="about-close">Close</button>
       </section>
-      <div class="wrap">
-        <section class="home-split">
-          <p class="lede" data-lede></p>
-          <div data-home-feature></div>
-        </section>
-        <section class="home-rest pair" data-home-categories></section>
-        <section class="about" data-about></section>
-        <section class="columns">
-          <div>
-            <h2>Clients</h2>
-            <ul data-clients></ul>
-          </div>
-          <div>
-            <h2>Services</h2>
-            <ul data-services></ul>
-          </div>
-        </section>
-        <p class="cta" data-cta></p>
-        <footer class="site-footer" data-footer></footer>
-      </div>
     </main>
-    <div class="player" data-player hidden>
-      <div class="player-frame">
-        <div data-player-frame></div>
-        <div class="player-bar">
-          <span data-player-title></span>
-          <button class="player-close" type="button">Close</button>
-        </div>
+
+    <footer class="transport">
+      <div class="credit">
+        <button class="hold" type="button" id="hold">Loading</button>
+        <p class="detail" id="detail" hidden></p>
       </div>
-    </div>
-    <script src="js/site.js"></script>
+      <div class="playhead" id="playhead">
+        <span class="playhead-line" id="playhead-line"></span>
+        <ol id="ticks"></ol>
+      </div>
+      <a class="watch" id="watch" hidden>Watch</a>
+    </footer>
+    <p class="live" id="live" aria-live="polite"></p>
+    <script src="js/reel.js"></script>
   </body>
 </html>
