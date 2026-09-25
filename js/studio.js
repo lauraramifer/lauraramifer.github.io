@@ -827,7 +827,7 @@ async function boot() {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const [site, work, extras] = await Promise.all([
     loadJson("data/site.json"),
-    loadJson("data/work.json?v=3"),
+    loadJson("data/work.json?v=4"),
     loadJson("data/orbit.json"),
   ]);
   const pieces = work.filter((item) => Number.isInteger(item.reel)).sort((a, b) => a.reel - b.reel);
