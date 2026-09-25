@@ -8,7 +8,7 @@
     ],
     "vimeo": "",
     "watchUrl": "https://lauraramifer.myportfolio.com/editing-showreel-laura-ramirez",
-    "still": "assets/stills/editing-showreel.jpg",
+    "still": "assets/stills/editing-showreel.jpg?v=2",
     "plate": "#1a1410",
     "featured": true,
     "span": "wide",
@@ -180,14 +180,14 @@
     "plate": "#1a2330"
   },
   {
-    "id": "jay-caridad-se-pego",
-    "title": "Jay Caridad — Se Pegó",
+    "id": "rock-infame",
+    "title": "Rock Infame",
     "year": 2023,
     "categories": [
       "music-videos"
     ],
     "vimeo": "",
-    "watchUrl": "https://lauraramifer.myportfolio.com/jay-caridad-se-pego-videoclip-oficial",
+    "watchUrl": "https://lauraramifer.myportfolio.com/official-music-video-rock-infame",
     "plate": "#4a1020",
     "still": "assets/stills/jay-caridad-se-pego.jpg",
     "reel": 1
@@ -224,17 +224,6 @@
     "vimeo": "",
     "watchUrl": "https://lauraramifer.myportfolio.com/corporate-event-recaps",
     "plate": "#241c14"
-  },
-  {
-    "id": "rock-infame",
-    "title": "Rock Infame",
-    "year": 2022,
-    "categories": [
-      "music-videos"
-    ],
-    "vimeo": "",
-    "watchUrl": "https://lauraramifer.myportfolio.com/official-music-video-rock-infame",
-    "plate": "#2b0f18"
   },
   {
     "id": "future-sounds-iii",

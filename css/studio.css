@@ -619,12 +619,6 @@ button { font: inherit; color: inherit; }
   pointer-events: none;
 }
 
-.card img[src$="editing-showreel.jpg"],
-.selected-card img[src$="editing-showreel.jpg"],
-.orbit img[src$="editing-showreel.jpg"] {
-  object-position: 56% center;
-}
-
 .card-name {
   flex: none;
   margin: 5px 3px 1px;

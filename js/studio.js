@@ -572,7 +572,7 @@ function mountSelected(work, extras, loads) {
   const stillByUrl = new Map(extras.map((item) => [item.watchUrl, item.still]));
   const lead = [
     "https://lauraramifer.myportfolio.com/photography",
-    "https://lauraramifer.myportfolio.com/jay-caridad-se-pego-videoclip-oficial",
+    "https://lauraramifer.myportfolio.com/official-music-video-rock-infame",
     "https://lauraramifer.myportfolio.com/berlitz-ctv-ad",
     "https://lauraramifer.myportfolio.com/ttec-bethespark",
     "https://lauraramifer.myportfolio.com/corporate-event-recaps",
@@ -827,7 +827,7 @@ async function boot() {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const [site, work, extras] = await Promise.all([
     loadJson("data/site.json"),
-    loadJson("data/work.json?v=2"),
+    loadJson("data/work.json?v=3"),
     loadJson("data/orbit.json"),
   ]);
   const pieces = work.filter((item) => Number.isInteger(item.reel)).sort((a, b) => a.reel - b.reel);
