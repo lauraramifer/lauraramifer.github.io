@@ -633,29 +633,33 @@ function cycleSelected(row, reduce) {
   let holdUntil = 0;
   let last = 0;
   let pos = row.scrollLeft;
-  const pause = (ms) => {
+  let expected = pos;
+  const adopt = (ms) => {
+    pos = row.scrollLeft;
+    expected = pos;
     holdUntil = performance.now() + ms;
+  };
+  const grab = () => {
+    holding = true;
   };
   const release = () => {
     holding = false;
-    pos = row.scrollLeft;
-    pause(700);
+    adopt(900);
   };
-  row.addEventListener("pointerdown", () => {
-    holding = true;
-  });
+  row.addEventListener("pointerdown", grab);
   row.addEventListener("pointerup", release);
   row.addEventListener("pointercancel", release);
-  row.addEventListener("keydown", () => {
-    pos = row.scrollLeft;
-    pause(1200);
-  });
+  row.addEventListener("touchstart", grab, { passive: true });
+  row.addEventListener("touchend", release, { passive: true });
+  row.addEventListener("touchcancel", release, { passive: true });
+  row.addEventListener("keydown", () => adopt(1200));
   row.addEventListener("wheel", (event) => {
-    if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
-    pos = row.scrollLeft;
-    pause(900);
+    if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) adopt(900);
   }, { passive: true });
-  row.addEventListener("focusin", () => pause(1200));
+  row.addEventListener("focusin", () => adopt(1200));
+  row.addEventListener("scroll", () => {
+    if (Math.abs(row.scrollLeft - expected) > 1.5) adopt(900);
+  }, { passive: true });
   const step = (now) => {
     if (loop <= 0) measure();
     const dt = last ? Math.min(now - last, 200) : 16;
@@ -664,6 +668,7 @@ function cycleSelected(row, reduce) {
     if (running) {
       pos += (stride / 25600) * dt;
       if (pos >= loop) pos -= loop;
+      expected = pos;
       row.scrollLeft = pos;
     }
     requestAnimationFrame(step);
