@@ -11,50 +11,182 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600&family=Bebas+Neue&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,700&family=Schibsted+Grotesk:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/reel.css" />
+    <link rel="stylesheet" href="css/studio.css?v=56" />
   </head>
   <body>
-    <a class="skip" href="#stage">Skip to reel</a>
-    <header class="top">
-      <button class="name" type="button" id="about-open" aria-expanded="false" aria-controls="about">
-        Laura Ramirez F.
+    <a class="skip" href="#playground">Skip to content</a>
+    <p class="watermark" aria-hidden="true"><span>laura</span><span>ramirez</span></p>
+
+    <header class="topbar">
+      <a class="lr" href="#top">LR</a>
+      <p class="london-pill"><span class="pulse"></span> London, UK</p>
+      <button class="menu-btn" type="button" id="menu-open" aria-expanded="false" aria-controls="menu">
+        Menu
       </button>
-      <nav class="links" aria-label="Site">
-        <span class="year" id="year"></span>
-        <a href="work.html">All work</a>
-        <a class="contact" id="contact" href="https://www.linkedin.com/in/lauraramirezf/">Contact</a>
-      </nav>
     </header>
 
-    <main class="stage" id="stage">
-      <div class="titlecard" id="titlecard">
-        <p id="titlecard-name">Laura Ramirez F.</p>
+    <nav class="menu" id="menu" hidden>
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#playground">Playground</a>
+      <a href="work.html">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main id="top">
+      <section class="sheet">
+        <div class="stage" id="stage">
+          <div class="orbit" id="orbit"></div>
+          <canvas id="fluid" aria-label="Move across the page to reveal the work"></canvas>
+        </div>
+        <div class="doodles" aria-hidden="true">
+          <p class="ink ink-ideas">Ideas<br />Stories<br />Moving Pictures</p>
+          <div class="stickies">
+            <span class="sticky sticky-mint">Storyteller</span>
+            <span class="sticky sticky-pink">Visual thinker</span>
+            <span class="sticky sticky-yellow">Detail obsessed</span>
+          </div>
+          <figure class="edit-card">
+            <span class="edit-tape"></span>
+            <img src="assets/timeline.jpg" alt="" />
+            <figcaption>good edits<br />brighter days.</figcaption>
+          </figure>
+        </div>
+        <div class="sheet-inner">
+          <div class="mark">
+            <h1 class="logo">
+              <img src="assets/logo.png?v=2" alt="Laura R." />
+            </h1>
+            <p class="specialist">Audiovisual production &amp; post-production specialist</p>
+          </div>
+          <a class="scroll-cue" href="#playground">Scroll</a>
+          <h2 class="promise">
+            I make things move —<br />
+            from the first weird idea<br />
+            to the final <span class="yes">“YES!”</span>
+          </h2>
+          <p class="open-line">Open to new work, creative ideas &amp; meaningful collaborations.</p>
+          <a class="btn" href="#contact">Let’s make something →</a>
+        </div>
+      </section>
+
+      <section class="playground" id="playground">
+        <div class="play-stage" data-layout="line">
+          <h2 class="play-sentence" aria-label="Every idea deserves to move.">
+            <span class="play-row">
+              <span class="play-word" data-col="left" data-row="1" data-mark="pink">Every</span>
+              <span class="play-word" data-col="right" data-row="1">idea</span>
+            </span>
+            <span class="play-row">
+              <span class="play-word" data-col="left" data-row="2">deserves</span>
+              <span class="play-word" data-col="right" data-row="2" data-mark="yellow">to move.</span>
+            </span>
+          </h2>
+          <p class="play-note play-note-left">Ideas<br />Frames<br />People<br />Places<br />Stories</p>
+          <aside class="clip-note">
+            <svg class="paperclip" viewBox="0 0 40 72" aria-hidden="true">
+              <path d="M22 8 C 12 8 9 16 9 22 L 9 50 C 9 61 31 61 31 48 L 31 18 C 31 12 25 10 21 15 L 21 44 C 21 49 15 49 15 42 L 15 22" fill="none" stroke="#141414" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+            <p>Good<br />stories<br /><span class="hi">brighter<br />people.</span><svg class="smiley" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12.5" fill="none" stroke="#141414" stroke-width="1.4" /><circle cx="11.5" cy="13" r="1.3" fill="#141414" /><circle cx="20.5" cy="13" r="1.3" fill="#141414" /><path d="M10 18.5 Q16 24 22 18.5" fill="none" stroke="#141414" stroke-width="1.4" stroke-linecap="round" /></svg></p>
+          </aside>
+          <div class="gallery" id="gallery"></div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Video editing — Motion design — Photography — Post-production — VFX — AI creative — Storytelling —</span>
+          <span>Video editing — Motion design — Photography — Post-production — VFX — AI creative — Storytelling —</span>
+        </div>
       </div>
-      <button class="frame" type="button" id="frame" aria-pressed="false" aria-label="Hold the current piece">
-        <img id="still" alt="" />
-        <span class="flash" id="flash" aria-hidden="true"></span>
-      </button>
-      <section class="about" id="about" hidden>
-        <div class="about-copy" id="about-copy"></div>
-        <button class="about-close" type="button" id="about-close">Close</button>
+
+      <section class="about" id="about">
+        <div class="about-copy">
+          <h2 id="aim"></h2>
+          <div id="about-body"></div>
+          <a class="btn" href="work.html">All projects →</a>
+        </div>
+        <figure class="film">
+          <div class="film-stack">
+            <img class="film-back" src="assets/stills/orbit/corporate-event-recaps.jpg" alt="" />
+            <span class="film-tape" aria-hidden="true"></span>
+            <img class="film-side" src="assets/stills/berlitz-ctv.jpg" alt="" />
+            <div class="film-frame">
+              <img src="assets/stills/orbit/photography.jpg" alt="A photograph from Laura’s work" />
+            </div>
+            <div class="film-polaroid">
+              <img src="assets/stills/jay-caridad-se-pego.jpg" alt="" />
+            </div>
+            <svg class="film-arrow" viewBox="0 0 90 70" aria-hidden="true">
+              <path d="M18 8 C 28 24, 22 40, 36 48 C 48 54, 58 46, 62 40" fill="none" stroke="#141414" stroke-width="1.4" stroke-linecap="round" />
+              <path d="M54 34 L66 42 L52 48" fill="none" stroke="#141414" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <figcaption class="note">Finding better ways<br />to tell stories.</figcaption>
+          </div>
+        </figure>
+      </section>
+
+      <section class="closing" id="contact">
+        <div class="selected">
+          <div class="selected-top">
+          <a class="selected-label" href="work.html">Selected<br />projects<span>→</span></a>
+          <div class="selected-row">
+            <a class="selected-card" href="https://lauraramifer.myportfolio.com/photography" target="_blank" rel="noreferrer">
+              <img src="assets/stills/orbit/photography.jpg" alt="Photography" />
+              <span class="play" aria-hidden="true"></span>
+            </a>
+            <a class="selected-card" href="https://lauraramifer.myportfolio.com/jay-caridad-se-pego-videoclip-oficial" target="_blank" rel="noreferrer">
+              <img src="assets/stills/jay-caridad-se-pego.jpg" alt="Jay Caridad — Se Pegó" />
+              <span class="play" aria-hidden="true"></span>
+            </a>
+            <a class="selected-card" href="https://lauraramifer.myportfolio.com/berlitz-ctv-ad" target="_blank" rel="noreferrer">
+              <img src="assets/stills/berlitz-ctv.jpg" alt="Berlitz" />
+              <span class="play" aria-hidden="true"></span>
+            </a>
+            <a class="selected-card" href="https://lauraramifer.myportfolio.com/ttec-bethespark" target="_blank" rel="noreferrer">
+              <img src="assets/stills/ttec-bethespark.jpg" alt="TTEC BeTheSpark" />
+              <span class="play" aria-hidden="true"></span>
+            </a>
+            <a class="selected-card" href="https://lauraramifer.myportfolio.com/corporate-event-recaps" target="_blank" rel="noreferrer">
+              <img src="assets/stills/orbit/corporate-event-recaps.jpg" alt="Corporate event recaps" />
+              <span class="play" aria-hidden="true"></span>
+            </a>
+          </div>
+          <p class="selected-note">Brands<br />Music<br />Social impact<br />Tech<br />and more...</p>
+          </div>
+          <p class="clients" id="client-list"></p>
+        </div>
+        <div class="close-line">
+          <h2>Some ideas<br /><span class="stay">stay in your head.</span></h2>
+          <span class="close-rule" aria-hidden="true"></span>
+          <p class="close-b">
+            <span class="close-row">Others
+              <svg class="close-star" viewBox="0 0 72 72" aria-hidden="true">
+                <path d="M36 4 C 38 20, 34 26, 36 36 C 38 48, 34 58, 36 68" fill="none" stroke="#f4a8c8" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M8 16 C 22 24, 28 30, 36 36 C 46 42, 56 50, 66 58" fill="none" stroke="#f4a8c8" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M64 12 C 50 22, 42 30, 36 36 C 28 44, 18 52, 8 60" fill="none" stroke="#f4a8c8" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M6 36 C 20 34, 28 36, 36 36 C 48 36, 58 38, 68 32" fill="none" stroke="#f4a8c8" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M14 22 C 24 28, 30 32, 36 36 C 42 40, 50 46, 58 52" fill="none" stroke="#f4a8c8" stroke-width="1.4" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="close-row"><span>move</span> the world.</span>
+          </p>
+        </div>
+        <svg class="close-curve" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 36 Q 720 6 1440 36" fill="none" stroke="#d5d5d5" stroke-width="1.5" />
+        </svg>
+        <a class="mail" id="mail" href="mailto:Lauraramifer@gmail.com">Lauraramifer@gmail.com</a>
+        <p class="socials" id="socials"></p>
+        <p class="fine" id="fine"></p>
       </section>
     </main>
 
-    <footer class="transport">
-      <div class="credit">
-        <button class="hold" type="button" id="hold">Loading</button>
-        <p class="detail" id="detail" hidden></p>
-      </div>
-      <div class="playhead" id="playhead">
-        <span class="playhead-line" id="playhead-line"></span>
-        <ol id="ticks"></ol>
-      </div>
-      <a class="watch" id="watch" hidden>Watch</a>
-    </footer>
-    <p class="live" id="live" aria-live="polite"></p>
-    <script src="js/reel.js"></script>
+    <div class="preloader" id="preloader" aria-live="polite">
+      <span id="count">00</span>
+    </div>
+    <script src="js/studio.js?v=38"></script>
   </body>
 </html>
