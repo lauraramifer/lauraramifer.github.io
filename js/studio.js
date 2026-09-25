@@ -632,23 +632,28 @@ function cycleSelected(row, reduce) {
   let holding = false;
   let holdUntil = 0;
   let last = 0;
+  let pos = row.scrollLeft;
   const pause = (ms) => {
     holdUntil = performance.now() + ms;
+  };
+  const release = () => {
+    holding = false;
+    pos = row.scrollLeft;
+    pause(700);
   };
   row.addEventListener("pointerdown", () => {
     holding = true;
   });
-  row.addEventListener("pointerup", () => {
-    holding = false;
-    pause(700);
+  row.addEventListener("pointerup", release);
+  row.addEventListener("pointercancel", release);
+  row.addEventListener("keydown", () => {
+    pos = row.scrollLeft;
+    pause(1200);
   });
-  row.addEventListener("pointercancel", () => {
-    holding = false;
-    pause(700);
-  });
-  row.addEventListener("keydown", () => pause(1200));
   row.addEventListener("wheel", (event) => {
-    if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) pause(900);
+    if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
+    pos = row.scrollLeft;
+    pause(900);
   }, { passive: true });
   row.addEventListener("focusin", () => pause(1200));
   const step = (now) => {
@@ -657,8 +662,9 @@ function cycleSelected(row, reduce) {
     last = now;
     const running = !holding && now >= holdUntil && !document.hidden && loop > 0 && stride > 0;
     if (running) {
-      row.scrollLeft += (stride / 25600) * dt;
-      if (row.scrollLeft >= loop) row.scrollLeft -= loop;
+      pos += (stride / 25600) * dt;
+      if (pos >= loop) pos -= loop;
+      row.scrollLeft = pos;
     }
     requestAnimationFrame(step);
   };
