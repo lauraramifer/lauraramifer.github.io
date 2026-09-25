@@ -657,7 +657,7 @@ function cycleSelected(row, reduce) {
     last = now;
     const running = !holding && now >= holdUntil && !document.hidden && loop > 0 && stride > 0;
     if (running) {
-      row.scrollLeft += (stride / 12800) * dt;
+      row.scrollLeft += (stride / 25600) * dt;
       if (row.scrollLeft >= loop) row.scrollLeft -= loop;
     }
     requestAnimationFrame(step);
