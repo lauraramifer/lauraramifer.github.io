@@ -567,7 +567,7 @@ function mountName(reduce) {
   if (document.fonts) document.fonts.ready.then(apply);
 }
 
-function mountSelected(work, extras, loads) {
+function mountSelected(work, extras, loads, reduce) {
   const row = must(".selected-row");
   const stillByUrl = new Map(extras.map((item) => [item.watchUrl, item.still]));
   const lead = [
@@ -606,6 +606,49 @@ function mountSelected(work, extras, loads) {
     row.append(card);
     loads.push(watchImage(img, piece.still));
   });
+  cycleSelected(row, reduce);
+}
+
+function cycleSelected(row, reduce) {
+  const originals = [...row.children];
+  if (reduce || originals.length < 6) return;
+  originals.forEach((card) => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    clone.tabIndex = -1;
+    row.append(clone);
+  });
+  row.classList.add("is-cycling");
+  let loop = 0;
+  let stride = 0;
+  const measure = () => {
+    const first = originals[0];
+    const clone = row.children[originals.length];
+    loop = clone.offsetLeft - first.offsetLeft;
+    stride = originals[1].offsetLeft - first.offsetLeft;
+  };
+  measure();
+  window.addEventListener("resize", measure);
+  let holdUntil = 0;
+  let last = 0;
+  const pause = () => {
+    holdUntil = performance.now() + 3200;
+  };
+  ["pointerdown", "wheel", "touchstart", "keydown"].forEach((type) => {
+    row.addEventListener(type, pause, { passive: true });
+  });
+  row.addEventListener("focusin", pause);
+  const step = (now) => {
+    const dt = last ? Math.min(now - last, 48) : 16;
+    last = now;
+    if (loop <= 0) measure();
+    if (!document.hidden && now >= holdUntil && loop > 0 && stride > 0) {
+      row.scrollLeft += (stride / 8000) * dt;
+      if (row.scrollLeft >= loop) row.scrollLeft -= loop;
+    }
+    requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
 }
 
 function mountPlayground(pieces, loads, reduce) {
@@ -878,7 +921,7 @@ async function boot() {
   });
 
   const loads = [];
-  mountSelected(work, extras, loads);
+  mountSelected(work, extras, loads, reduce);
   mountPlayground([...pieces, ...extras.slice(0, 3)], loads, reduce);
 
   const orbit = must("#orbit");

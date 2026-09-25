@@ -910,6 +910,11 @@ button { font: inherit; color: inherit; }
   scrollbar-width: thin;
 }
 
+.selected-row.is-cycling {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
 .selected-card {
   position: relative;
   display: block;
