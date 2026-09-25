@@ -83,11 +83,15 @@ button { font: inherit; color: inherit; }
 .lr {
   grid-column: 1;
   justify-self: start;
-  font-family: "Fraunces", serif;
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: -0.04em;
+  display: block;
+  line-height: 0;
   text-decoration: none;
+}
+
+.lr img {
+  display: block;
+  height: 28px;
+  width: auto;
 }
 
 .london-pill {
@@ -894,16 +898,25 @@ button { font: inherit; color: inherit; }
 }
 
 .selected-row {
+  --selected-gap: 10px;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 4 * var(--selected-gap)) / 5);
+  gap: var(--selected-gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: rgba(255, 255, 255, 0.55) transparent;
+  scrollbar-width: thin;
 }
 
 .selected-card {
   position: relative;
   display: block;
+  min-width: 0;
   aspect-ratio: 1;
   overflow: hidden;
+  scroll-snap-align: start;
   background: #222;
 }
 
@@ -1148,7 +1161,7 @@ button { font: inherit; color: inherit; }
 
   .selected-top { grid-template-columns: 1fr; }
 
-  .selected-row { gap: 6px; }
+  .selected-row { --selected-gap: 6px; }
 
   .selected-note { display: none; }
 

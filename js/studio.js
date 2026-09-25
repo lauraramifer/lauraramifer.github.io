@@ -567,6 +567,47 @@ function mountName(reduce) {
   if (document.fonts) document.fonts.ready.then(apply);
 }
 
+function mountSelected(work, extras, loads) {
+  const row = must(".selected-row");
+  const stillByUrl = new Map(extras.map((item) => [item.watchUrl, item.still]));
+  const lead = [
+    "https://lauraramifer.myportfolio.com/photography",
+    "https://lauraramifer.myportfolio.com/jay-caridad-se-pego-videoclip-oficial",
+    "https://lauraramifer.myportfolio.com/berlitz-ctv-ad",
+    "https://lauraramifer.myportfolio.com/ttec-bethespark",
+    "https://lauraramifer.myportfolio.com/corporate-event-recaps",
+  ];
+  const leadAt = new Map(lead.map((url, index) => [url, index]));
+  const seen = new Set();
+  const pieces = [];
+  const add = (title, watchUrl, still) => {
+    if (!watchUrl || !still || seen.has(watchUrl)) return;
+    seen.add(watchUrl);
+    pieces.push({ title, watchUrl, still });
+  };
+  work.forEach((item) => {
+    const still = stillByUrl.get(item.watchUrl) || (item.still && item.still.startsWith("assets/") ? item.still : "");
+    add(item.title, item.watchUrl, still);
+  });
+  extras.forEach((item) => add(item.title, item.watchUrl, item.still));
+  pieces.sort((a, b) => (leadAt.get(a.watchUrl) ?? 100) - (leadAt.get(b.watchUrl) ?? 100));
+  pieces.forEach((piece) => {
+    const card = document.createElement("a");
+    card.className = "selected-card";
+    card.href = piece.watchUrl;
+    card.target = "_blank";
+    card.rel = "noreferrer";
+    const img = document.createElement("img");
+    img.alt = piece.title;
+    const play = document.createElement("span");
+    play.className = "play";
+    play.setAttribute("aria-hidden", "true");
+    card.append(img, play);
+    row.append(card);
+    loads.push(watchImage(img, piece.still));
+  });
+}
+
 function mountPlayground(pieces, loads, reduce) {
   const section = must("#playground");
   const stage = must(".play-stage");
@@ -837,6 +878,7 @@ async function boot() {
   });
 
   const loads = [];
+  mountSelected(work, extras, loads);
   mountPlayground([...pieces, ...extras.slice(0, 3)], loads, reduce);
 
   const orbit = must("#orbit");
