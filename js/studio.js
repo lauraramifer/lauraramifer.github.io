@@ -870,8 +870,13 @@ async function boot() {
   const canvas = must("#fluid");
   let fluid = null;
   if (!reduce) {
-    await loads[loads.length - 1];
-    fluid = createFluid(canvas, paper);
+    try {
+      await loads[loads.length - 1];
+      fluid = createFluid(canvas, paper);
+    } catch (error) {
+      fluid = null;
+      console.error(error);
+    }
   }
 
   let aim = null;
@@ -965,11 +970,15 @@ async function boot() {
       count.textContent = String(Math.round((loaded / loads.length) * 100)).padStart(2, "0");
     });
   });
-  await Promise.all(loads);
+  await Promise.allSettled(loads);
   count.textContent = "100";
   placeOrbit(figures, 0);
   window.setTimeout(() => must("#preloader").classList.add("is-done"), 320);
   frameId = requestAnimationFrame(frame);
 }
 
-boot();
+boot().catch((error) => {
+  console.error(error);
+  const preloader = document.querySelector("#preloader");
+  if (preloader) preloader.classList.add("is-done");
+});
